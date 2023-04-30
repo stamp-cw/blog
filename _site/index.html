@@ -1,4 +1,45 @@
-<div id="calendar" class="calendar">
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="/jekyll-theme-diary/assets/css/main.css">
+    <link rel="stylesheet" href="/jekyll-theme-diary/assets/css/font-awesome.min.css">
+    <title>DIARY</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><i class="fa fa-paper-plane-o"></i></li>
+			<!--get the nav links in  _config.yml -->
+			
+			<li><a href="/jekyll-theme-diary/">Home</a></li>
+			
+			<li><a href="/jekyll-theme-diary/diary">Diary</a></li>
+			
+        </ul>
+    </nav>
+
+    
+
+    
+</header>
+<div class="content">
+    <div class="paper paper-before" id="paperBefore"></div>
+    <div class="paper paper-article">
+        <!-- Date No. sign -->
+        <a href="#" title="点击查看日历">
+        <span id="openBtn" class="date-index">
+            No.<span id="postIndex"></span><br>
+                <!--Date YYYY-MM-DD-->
+            
+        </span>
+        </a>
+        
+        <!--Calendar body-->
+        <div id="calendar" class="calendar">
     <div id="dateTable" class="cal-table">
         <div id="calHeader" class="cal-body">
             <div id="calYear" class="calheader-item cal-year">
@@ -88,19 +129,62 @@
 
 <script>
     var urlJSON = {
-    {% for post in site.posts %}
-    "{{ post.url | slice: 1, 10 | replace: '-', '/' | replace: '/0', '/' | strip }}": {
-        url: "{{ site.baseurl }}{{ post.url }}",
-        excerpt: "{{ post.excerpt }}",
-        index: {{ forloop.rindex }}
+    
+    "2019/8/6": {
+        url: "/jekyll-theme-diary/2019/08/06/sorores-dicta",
+        excerpt: "",
+        index: 3
     },
-    {% endfor %}
+    
+    "2019/8/5": {
+        url: "/jekyll-theme-diary/2019/08/05/about",
+        excerpt: "",
+        index: 2
+    },
+    
+    "2018/12/11": {
+        url: "/jekyll-theme-diary/2018/12/11/nos-tulit-videt",
+        excerpt: "",
+        index: 1
+    },
+    
     "end": "end"
     };
-    {% if page.date %}
-    var activeArticle = "{{ page.date | slice: 0, 10 | replace: '-', '/' | replace: '/0', '/' }}";
-    {% else %}
+    
     var activeArticle = new Date().toLocaleDateString();
-    {% endif %}
+    
 </script>
-<script type="text/javascript" src="{{ "/assets/js/calendar.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="/jekyll-theme-diary/assets/js/calendar.js"></script>
+    
+        <!--Article body-->
+        <article class="typo">
+            <style>
+    #calendar {
+        display: block;
+    }
+    #closeBtn, #openBtn {
+        display: none;
+    }
+</style>
+
+        </article>
+    </div>        
+</div>
+	<footer>
+    <span class="copyright">© 2017-2019 YourName</span>
+    <div>
+        <p class="comment">
+            <a href="https://github.com/jekyll/jekyll">Jekyll</a> 
+            Theme <a href="https://github.com/soyaine/jekyll-theme-diary">Diary</a> 
+            by <a href="https://github.com/soyaine">Soyaine</a><br>
+		</p>
+        
+		<ul class="contact">
+            <li><a href="https://github.com/yourname"><i class="fa fa-2x fa-github"></i> </a> </li>
+            <li><a href="https://twitter.com/yourname"><i class="fa fa-2x fa-twitter"></i> </a> </li>
+            <li><a href="mailto:yourname@gmail.com"><i class="fa fa-envelope fa-2x"></i></a></li>
+        </ul>
+	</div>
+</footer>
+</body>
+</html>
