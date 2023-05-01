@@ -10,7 +10,7 @@ title: Diary
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.name | remove: ".md" }}</a>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name | remove: ".md" }}</a>
     </li>
   {% endfor %}
 </ul>
