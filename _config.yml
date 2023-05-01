@@ -1,11 +1,12 @@
 name: Stamp
 permalink: :year/:month/:day/:title
-baseurl: /_site
+# abaseurl: /_site
 
 # My Config
 destination: docs/_site
 incremental: false
 exclude: [docs]
+keep_files: [../index.html]
 
 collections:
   diary:
