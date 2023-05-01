@@ -4,7 +4,7 @@ permalink: :year/:month/:day/:title
 
 # My Config
 destination: docs 
-incremental: true
+incremental: false
 
 collections:
   diary:
