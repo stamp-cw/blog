@@ -10,7 +10,7 @@ title: Diary
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.name | remove: ".md" }}</a>
+      <a href="{{ post.url }}">{{ post.url | replace : "/","-" | remove_first: "-" }}</a>
     </li>
   {% endfor %}
 </ul>
