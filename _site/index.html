@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-    <title>Diary</title>
+    <title>HomePage</title>
 </head>
 <body>
 <header>
@@ -35,7 +35,7 @@
         <span id="openBtn" class="date-index">
             No.<span id="postIndex"></span><br>
                 <!--Date YYYY-MM-DD-->
-            2023-05-01
+            
         </span>
         </a>
         
@@ -134,6 +134,12 @@
     "2019/8/6": {
         url: "/2019/08/06/sorores-dicta",
         excerpt: "",
+        index: 8
+    },
+    
+    "2019/8/6": {
+        url: "/2019/08/06/sorores-dicta",
+        excerpt: "",
         index: 7
     },
     
@@ -176,7 +182,7 @@
     "end": "end"
     };
     
-    var activeArticle = "2023/5/1";
+    var activeArticle = new Date().toLocaleDateString();
     
 </script>
 <script type="text/javascript" src="/assets/js/calendar.js"></script>
@@ -184,43 +190,14 @@
     
         <!--Article body-->
         <article class="typo">
-            <link rel="stylesheet" href="/assets/css/syntax.css">
-<ol style="list-style:none;">
-    <li>
-        <h1><b> 文章列表</b> </h1>
-    </li>
-</ol>
-<ul>
-  
-    <li>
-      <a href="/2019/08/06/sorores-dicta">2023-05-01-sorores-dicta</a>
-    </li>
-  
-    <li>
-      <a href="/2019/08/06/sorores-dicta">2019-08-06-sorores-dicta</a>
-    </li>
-  
-    <li>
-      <a href="/2019/08/06/sorores-dicta">2019-07-06-sorores-dicta</a>
-    </li>
-  
-    <li>
-      <a href="/2019/08/05/about">2019-08-05-about</a>
-    </li>
-  
-    <li>
-      <a href="/2018/12/11/index">2018-12-22-index</a>
-    </li>
-  
-    <li>
-      <a href="/2018/12/11/nos-tulit-videt">2018-12-11-nos-tulit-videt</a>
-    </li>
-  
-    <li>
-      <a href="/2018/12/11/index">2018-12-11-index</a>
-    </li>
-  
-</ul>
+            <style>
+    #calendar {
+        display: block;
+    }
+    #closeBtn, #openBtn {
+        display: none;
+    }
+</style>
 
         </article>
     </div>        
