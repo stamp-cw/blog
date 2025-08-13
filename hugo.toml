@@ -1,4 +1,4 @@
-baseURL = 'https://stamp-cw.github.io/'
+baseURL = 'https://stamp-cw.github.io/blog/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'ananke'
